@@ -1,0 +1,13 @@
+<p><%= link_to "Wikinimous", articles_path %></p>
+
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+
+<p><%= link_to "Edit this article", edit_article_path(@article.id) %></p>
+
+<%= link_to "Delete",
+            article_path(@article),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+<p><%= link_to "New Article", new_article_path %></p>
